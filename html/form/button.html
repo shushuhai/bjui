@@ -1,0 +1,94 @@
+<div class="bjui-pageContent">
+    <div class="bs-callout bs-callout-primary">
+        <div class="left-part pull-left">
+            <i class="glyphicon glyphicon-pencil"></i>
+            <a href="#">老冀汽修</a>
+            <i class="glyphicon glyphicon-pencil"></i>
+        </div>
+        <div class="right-part pull-right">
+            <i class="glyphicon glyphicon-pencil"></i>
+            111
+        </div>
+    </div>
+
+    <div class="container-fuild">
+        <div class="row">
+            <div class="col-md-8" style="padding: 10px;">
+                <button type="button" class="btn-primary"><i class="glyphicon glyphicon-yen"></i>结算</button>
+                <button type="button" class="btn-primary"><i class="glyphicon glyphicon-print"></i>打印</button>
+            </div>
+            <div class="col-md-3"  style="padding:10px;">
+                <div class="input-group" style="position:relative;" id="div_require">
+                    <input type="text" class="form-control" style="width:200px;" placeholder="接车单号/车辆牌照/联系人" />
+                    <span class="input-group-btn" style="width:20px;">
+                        <button class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                </div>
+                <div style="position:absolute;left:280px;top:10px;">
+                    <button class="btn btn-primary" id="btn_form"><i class="glyphicon glyphicon-arrow-down"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="div_form" style="display:block;">
+            <hr>
+            <div class="col-xs-10">
+                <form action="#" id="form_require" data-toggle="ajaxform">
+                    <div class="bjui-row col-4">
+                        <label class="row-label">公司门店</label>
+                        <div class="row-input">
+                            <select name="name" data-toggle="selectpicker">
+                                <option value="1">重庆老冀汽车服务有限公司</option>
+                                <option value="2">重庆圣巴汽车服务有限公司</option>
+                                <option value="3">重庆三得利汽车服务有限公司</option>
+                            </select>
+                        </div>
+                        <label class="row-label">接车单号</label>
+                        <div class="row-input">
+                            <input type="text" name="oddNum" />
+                        </div>
+                        <label class="row-label">车辆牌照</label>
+                        <div class="row-input">
+                            <input type="text" name="carLicense" />
+                        </div>
+                        <label class="row-label">维修类型</label>
+                        <div class="row-input">
+                            <select name="type" data-toggle="selectpicker">
+                                <option value="1">保养</option>
+                                <option value="2">总成维修</option>
+                                <option value="3">整车二级维修</option>
+                            </select>
+                        </div>
+                        <label class="row-label">车型</label>
+                        <div class="row-input">
+                            <input type="text" name="carType" />
+                        </div>
+                        <label class="row-label">联系人</label>
+                        <div class="row-input">
+                            <input type="sprayMan" name="phoneName" />
+                        </div>
+                        <label class="row-label">联系电话</label>
+                        <div class="row-input">
+                            <input type="phone" name="phoneName" />
+                        </div>
+                        <label class="row-label">维修顾问</label>
+                        <div class="row-input">
+                            <input type="text" name="counselor" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-2" style="position:relative;left:0;top:40px;">
+                <button type="button" class="btn-blue btn-nm"><i class="glyphicon glyphicon-search"></i>查询</button>
+                <button type="button" class="btn-default btn-nm"><i class="glyphicon glyphicon-repeat"></i>重置</button>
+            </div>
+        </div>
+        <table class="table table-bordered" id="tb_account">
+
+        </table>
+    </div>
+</div>
+<div class="bjui-pageFooter">
+    <ul>
+        <li><button type="button" class="btn-close" data-icon="close">关闭</button></li>
+    </ul>
+</div>
