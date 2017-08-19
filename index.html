@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>B-JUI 前端管理框架</title>
 <meta name="Keywords" content="B-JUI,Bootstrap,jquery,ui,前端,框架,开源,OSC,开源框架,knaan"/>
-<meta name="Description" content="B-JUI(Best jQuery UI)前端管理框架。轻松开发，专注您的业务，从B-JUI开始！"/> 
+<meta name="Description" content="B-JUI(Best jQuery UI)前端管理框架。轻松开发，专注您的业务，从B-JUI开始！"/>
 <!-- bootstrap - css -->
 <link href="B-JUI/themes/css/bootstrap.css" rel="stylesheet">
 <!-- core - css -->
@@ -106,14 +106,14 @@ $(function() {
 function MainMenuClick(event, treeId, treeNode) {
     if (treeNode.target && treeNode.target == 'dialog' || treeNode.target == 'navtab')
         event.preventDefault()
-    
+
     if (treeNode.isParent) {
         var zTree = $.fn.zTree.getZTreeObj(treeId)
-        
+
         zTree.expandNode(treeNode)
         return
     }
-    
+
     if (treeNode.target && treeNode.target == 'dialog')
         $(event.target).dialog({id:treeNode.targetid, url:treeNode.url, title:treeNode.name})
     else if (treeNode.target && treeNode.target == 'navtab')
@@ -125,7 +125,7 @@ var bjui_index_container = 'container_fluid'
 
 function bjui_index_exchange() {
     bjui_index_container = bjui_index_container == 'container_fluid' ? 'container' : 'container_fluid'
-    
+
     $('#bjui-top').find('> div').attr('class', bjui_index_container)
     $('#bjui-navbar').find('> div').attr('class', bjui_index_container)
     $('#bjui-body-box').find('> div').attr('class', bjui_index_container)
@@ -220,7 +220,7 @@ function bjui_index_exchange() {
                         <i class="fa fa-long-arrow-left"></i>
                     </div>
                     <div id="bjui-sidenav-box">
-                        
+
                     </div>
                 </div>
             </div>
@@ -246,46 +246,10 @@ function bjui_index_exchange() {
                         <div class="bjui-pageContent">
                             <div class="highlight">
                                 <pre class="prettyprint">
-
+                                    <h1>哈哈啊哈</h1>
                                 </pre>
-
-                                <table class="table table-bordered" id="datagrid-globals" data-toggle="datagrid" data-options="{
-                                        loadType:'GET',
-                                        filterThead:false,
-                                        columnFilter:false,
-                                        columnMenu:false,
-                                        showCheckboxcol:false,
-                                        height: '98%',
-                                        width:'100%',
-                                        gridTitle : '全局ID列表',
-                                        showToolbar: true,
-                                        toolbarCustom: globallistbar,
-                                        dataUrl: './json/datagrid/datagrid.json',
-                                        dataType: 'json',
-                                        editMode: {dialog:{width:'500',height:300,title:'编辑人员信息',mask:true,fresh:true,beforeClose:'closeeditglobal'}},
-                                        editUrl: 'html/pixconf/editglobal.html',
-                                        delUrl:'service/global/delete',
-                                        delPK:'globalid',
-                                        paging: {pageSize:2,selectPageSize:'15,30'},
-                                        linenumberAll: true}">
-                                    <thead>
-                                    <tr>
-                                        <th data-options="{name:'globalid',align:'center',width:20,quicksort:false}">ID</th>
-                                        <th data-options="{name:'name',align:'center',width:70,quicksort:false}">姓名</th>
-                                        <th data-options="{name:'sex',render:'renderSexType',align:'center',width:40}">性别</th>
-                                        <th data-options="{name:'birth',align:'center',width:120,quicksort:false}">生日</th>
-                                        <th data-options="{name:'mobile',align:'center',width:140,quicksort:false}">手机号</th>
-                                        <th data-options="{name:'idcard',align:'center',width:170,quicksort:false}">身份证</th>
-                                        <th data-options="{name:'medcard',align:'center',width:170,quicksort:false}">社保号</th>
-                                        <th data-options="{render:'global_operation',align:'center',quicksort:false}">操作</th>
-                                    </tr>
-                                    </thead>
-                                </table>
-                                <p><button type="button" class="btn-green" onclick="dialog_test2();">打开Dialog4(html)</button></p>
                             </div>
                         </div>
-
-
 
                     </div>
                 </div>
@@ -293,15 +257,6 @@ function bjui_index_exchange() {
         </div>
     </div>
 
-    <script>
-        function dialog_test2() {
-            BJUI.dialog({
-                id:'dialog4',
-                html:'<div style="margin:15px auto; padding:15px; width:300px; border:2px #ff6600 solid;"><h4 class="text-center">测试dialog加载html</h4></div>',
-                title:'示例Dialog4'
-            })
-        }
-    </script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="B-JUI/other/ie10-viewport-bug-workaround.js"></script>
 </body>
